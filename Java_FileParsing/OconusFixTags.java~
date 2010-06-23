@@ -1,0 +1,155 @@
+package Oconus;
+import java.util.regex.*;
+import java.util.*;
+import java.io.*;
+
+public class OconusFixTags  {
+  static final int PBLNAME    = 0;
+  static final int DWNAME     = 1;
+  static final int LINENO     = 2;
+  static final int TAGERRMSG  = 3;
+  static final int OLDTAG     = 4;
+  static final int ADDTOTAG   = 5;
+  static final int DWCONTNAME = 6;
+  static final int LABELTEXT  = 7;
+  static final int LINETEXT   = 8;
+  
+  static String rootName;
+  
+  public OconusFixTags() {
+  }
+
+  public static void main(String[] args) {
+    rootName = args[0];
+    File rootDir = new File(rootName);
+
+    // Process each missing tag line from the input file
+    String missingTagsFile = rootDir + "\\missingTagsFile.txt"; // this is a tab dilimited file
+    FileInputHandler fih = new FileInputHandler( missingTagsFile );
+
+    String line = fih.readLine(); // each line represents a missing tag in an exported datawidow file
+    line = fih.readLine(); // skip the header line
+    while ( line != null ) {
+      // Ignore comment lines
+      if (line.charAt(1) == '-' && line.charAt(2) == '-' ){
+        line = fih.readLine();
+        continue;
+      }
+      
+      // Parse the line to see if tag needs to be added.
+      StringTokenizer parser =  new StringTokenizer(line, "\t", true);
+      String[] theTokens = new String[9];
+      
+      // Store each token in the line into the token arrray
+      try {
+        int tokenCnt = 0;  int tokenIdx = 0;
+        while(parser.hasMoreTokens()) {
+          String thisToken = parser.nextToken();
+          if (thisToken.equals("\t")  ) 
+            if (++tokenCnt < 2) continue; else thisToken = "";
+          tokenCnt = 0;
+          theTokens[tokenIdx++] = thisToken;
+        }
+      } catch (NoSuchElementException e) {
+          System.out.println("Error->" + e);
+      }
+
+      // Update the file to include the tag to be added.
+      if (!theTokens[ADDTOTAG].equals(""))  // only add if a new add value is specified
+        addTagtoFile(theTokens);
+      
+      // Get the next line to parse.
+      line = fih.readLine();
+    }
+  }
+
+  static void addTagtoFile(String[] column) {
+    // Get pathname of file to update
+    String pathname = rootName + "\\" + column[PBLNAME] + "\\" + column[DWNAME] + ".srd";
+    String newpathname = rootName + "\\" + column[PBLNAME] + "\\" + column[DWNAME] + ".fix";
+    int lineNo = intValue(column[LINENO], -1); 
+    String line = "";
+    
+    try {
+      FileInputHandler inf = new FileInputHandler( pathname );
+      BufferedWriter outf = new BufferedWriter( new FileWriter(newpathname));
+
+      // Skip to line that needs to change
+      // C:\eFH\eFH_Exp\Assign_Application\d_eventlog_applevents.srd
+      for (int i = 0; i < lineNo - 1; i++){
+        line = inf.readLine();
+        outf.write(line); outf.newLine();
+      }
+      line = inf.readLine();
+
+      // Validate that control name or label text exists on this line
+      int controlNamePos = line.indexOf("name="+column[DWCONTNAME]);
+      int labelTextPos = line.toLowerCase().indexOf("text=\""+column[LABELTEXT]);
+
+      if (controlNamePos == -1 && labelTextPos == -1) {
+        System.out.println("Error->Could not find " + column[DWCONTNAME] + " or " + column[LABELTEXT] + " in " + pathname);
+      } else {
+
+        // Get position of tag (if it exists)
+        int tagPos = line.indexOf("tag=\"");
+        
+        // Add new tag data
+        //System.out.println(line);        
+        int insertPos = 0;
+        String insertText = "";
+        if (tagPos == -1) {
+          // Add tag and tag text
+          insertPos = line.indexOf(' ', controlNamePos) + 1;
+          insertText = " tag=\"" + column[ADDTOTAG] + "\" ";
+          line = line.substring(0, insertPos) + insertText + line.substring(insertPos);
+        } else {
+          // Append to tag text
+          String tagStr = getMatch("tag=\"(\"|(.*?[^~]\"))", line, tagPos) + "\""; 
+          insertPos = tagPos + tagStr.length() - 2;
+          insertText = ";" + column[ADDTOTAG];
+          line = line.substring(0, insertPos) + insertText + line.substring(insertPos);
+        }
+        //System.out.println(line);
+
+        // Now write out the rest of the lines
+        while (line != null) {
+          outf.write(line); outf.newLine();
+          line = inf.readLine();
+        }
+
+        // Replace original file with fixed file
+        inf.close();
+        outf.close();
+        System.out.println("Processing->" + pathname);
+
+        File orgf = new File(pathname);
+        File newf = new File(newpathname);
+        System.out.println( orgf.delete()?"Del Success":"Del Failed");
+        System.out.println( newf.renameTo(orgf)?"Ren Success":" Ren Failed");
+        
+      }      
+      
+    } catch (IOException e) {
+      System.out.println("Error->" + e);
+    }
+  }
+  
+  static int intValue (String val, int defaultVal) {
+    try {
+      return Integer.parseInt(val);
+    } catch (NumberFormatException nx) {
+      return defaultVal;
+    }
+  }
+
+  static String getMatch( String thePattern, String theLine, int startPos ) {
+    boolean isMatch;
+    Pattern pattern = Pattern.compile(thePattern);
+    Matcher match = pattern.matcher(theLine);
+    isMatch = match.find(startPos);
+    return isMatch ? match.group() : "";
+  }
+
+}
+
+
