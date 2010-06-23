@@ -1,14 +1,17 @@
 THIS IS JUST A PARTIAL LIST (I will add other titles I have read later...)
 
 I have read these books/media cover to cover and did most exercises:
-1. Computer Security Basics
-2. SOA Security
-3. Understanding Enterprise SOA
+1. Computer Security Basics - Lehtinen
+2. SOA Security - Kanneganti
+3. Understanding Enterprise SOA - Pulier
 4. Peepcode - clojure, Sinatra, jQuery, RSpec(all) , REST, Rails(all)
-5. HeadFirst PMP
-6. The RSpec Book
-7. The Java Programming Language 3rd Edition
-8. SQL for Smarties
+5. HeadFirst PMP - Greene
+6. The RSpec Book - Chelimsky
+7. The Java Programming Language 3rd Edition - Arnold, Gosling, Holmes
+8. SQL for Smarties - Celko
+9. Pragmatic Version Control using Subversion - Mason
+10. Product Lifecycle Management - Grieves
+11. Managing the Object-Oriented Project - Booch
 
 I have read at least 75% of these books and did some exercises:
 1. Agile Web Development Rails
