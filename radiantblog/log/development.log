@@ -1,0 +1,1739 @@
+Jun 22, 2010 11:35:10 PM com.sun.enterprise.v3.server.AppServerStartup run
+INFO: GlassFish v3 (74b) startup time : Embedded(173ms) startup services(108ms) total(281ms)
+Jun 22, 2010 11:35:11 PM AppServerStartup run
+INFO: [Thread[GlassFish Kernel Main Thread,5,main]] started
+Jun 22, 2010 11:35:11 PM org.hibernate.validator.util.Version <clinit>
+INFO: Hibernate Validator null
+Jun 22, 2010 11:35:11 PM com.sun.enterprise.v3.services.impl.GrizzlyProxy$2$1 onReady
+INFO: Grizzly Framework 1.9.18-k started in: 71ms listening on port 8081
+Jun 22, 2010 11:35:11 PM org.glassfish.kernel.config.DefaultConfigParser$2 run
+INFO: interface org.glassfish.scripting.jruby.config.JrubyContainer
+Jun 22, 2010 11:35:11 PM org.glassfish.scripting.jruby.JRubyConfigImpl <init>
+INFO: Running radiantblog in development environment.
+Jun 22, 2010 11:35:11 PM org.glassfish.scripting.jruby.RackApplicationChooser detectRails
+INFO: Rails application detected.
+Jun 22, 2010 11:35:11 PM org.glassfish.scripting.jruby.JRubyApplication <init>
+INFO: Loading application radiantblog at /
+Jun 22, 2010 11:35:11 PM com.sun.grizzly.jruby.RackGrizzlyAdapter <init>
+INFO: JRuby version is: 1.5.0
+Jun 22, 2010 11:35:16 PM com.sun.grizzly.jruby.rack.RackApplicationPoolFactory getRackApplocationPool
+SEVERE: The driver encountered an error: com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2666)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jruby.javasupport.JavaMethod.invokeDirectWithExceptionHandling(JavaMethod.java:533)
+	at org.jruby.javasupport.JavaMethod.invokeDirect(JavaMethod.java:383)
+	at org.jruby.java.invokers.InstanceMethodInvoker.call(InstanceMethodInvoker.java:68)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:329)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:188)
+	at org.jruby.ast.CallTwoArgNode.interpret(CallTwoArgNode.java:59)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.RescueBodyNode.interpret(RescueBodyNode.java:108)
+	at org.jruby.ast.RescueNode.handleException(RescueNode.java:164)
+	at org.jruby.ast.RescueNode.interpretWithJavaExceptions(RescueNode.java:121)
+	at org.jruby.ast.RescueNode.interpret(RescueNode.java:110)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:262)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:204)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:349)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:228)
+	at org.jruby.ast.CallThreeArgNode.interpret(CallThreeArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.runtime.InterpretedBlock.evalBlockBody(InterpretedBlock.java:373)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:327)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:366)
+	at org.jruby.runtime.BlockBody.call(BlockBody.java:71)
+	at org.jruby.runtime.Block.call(Block.java:85)
+	at org.jruby.java.proxies.JavaInterfaceTemplate$11.call(JavaInterfaceTemplate.java:383)
+	at org.jruby.javasupport.util.RuntimeHelpers$MethodMissingMethod.call(RuntimeHelpers.java:401)
+	at anon_class19768486_97743500.newConnection(anon_class19768486_97743500.gen:13)
+	at jdbc_adapter.RubyJdbcConnection.reconnect(RubyJdbcConnection.java:423)
+	at jdbc_adapter.RubyJdbcConnection.connection(RubyJdbcConnection.java:171)
+	at jdbc_adapter.RubyJdbcConnection$i_method_0_0$RUBYINVOKER$connection.call(jdbc_adapter/RubyJdbcConnection$i_method_0_0$RUBYINVOKER$connection.gen:65535)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.RescueNode.executeBody(RescueNode.java:199)
+	at org.jruby.ast.RescueNode.interpretWithJavaExceptions(RescueNode.java:118)
+	at org.jruby.ast.RescueNode.interpret(RescueNode.java:110)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:201)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:180)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:319)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:157)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:162)
+	at org.jruby.RubyClass$SpecificArityNew.call(RubyClass.java:804)
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:186)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.LocalAsgnNode.interpret(LocalAsgnNode.java:123)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:119)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:283)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:212)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:359)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:237)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:242)
+	at org.jruby.RubyClass$SpecificArityNew.call(RubyClass.java:826)
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:202)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:349)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:228)
+	at org.jruby.ast.CallThreeArgNode.interpret(CallThreeArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:180)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:172)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.FCallOneArgNode.interpret(FCallOneArgNode.java:36)
+	at org.jruby.ast.LocalAsgnNode.interpret(LocalAsgnNode.java:123)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:201)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:180)
+	at org.jruby.internal.runtime.methods.AliasMethod.call(AliasMethod.java:86)
+	at org.jruby.RubyClass.finvoke(RubyClass.java:542)
+	at org.jruby.RubyObject.send(RubyObject.java:1443)
+	at org.jruby.RubyObject$i_method_multi$RUBYINVOKER$send.call(org/jruby/RubyObject$i_method_multi$RUBYINVOKER$send.gen:65535)
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodZeroOrOneOrTwoOrNBlock.call(JavaMethod.java:283)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:329)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:188)
+	at org.jruby.ast.CallTwoArgNode.interpret(CallTwoArgNode.java:59)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.LocalAsgnNode.interpret(LocalAsgnNode.java:123)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:117)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:119)
+	at org.jruby.ast.DAsgnNode.interpret(DAsgnNode.java:110)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.runtime.InterpretedBlock.evalBlockBody(InterpretedBlock.java:373)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:346)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:303)
+	at org.jruby.runtime.Block.yield(Block.java:194)
+	at org.jruby.RubyKernel.loop_1_9(RubyKernel.java:1251)
+	at org.jruby.RubyKernel$s_method_0_0$RUBYFRAMEDINVOKER$loop_1_9.call(org/jruby/RubyKernel$s_method_0_0$RUBYFRAMEDINVOKER$loop_1_9.gen:65535)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:299)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:117)
+	at org.jruby.runtime.callsite.CachingCallSite.callIter(CachingCallSite.java:132)
+	at org.jruby.ast.FCallNoArgBlockNode.interpret(FCallNoArgBlockNode.java:32)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.runtime.InterpretedBlock.evalBlockBody(InterpretedBlock.java:373)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:294)
+	at org.jruby.runtime.InterpretedBlock.yieldSpecific(InterpretedBlock.java:228)
+	at org.jruby.runtime.Block.yieldSpecific(Block.java:99)
+	at org.jruby.ast.ZYieldNode.interpret(ZYieldNode.java:25)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.EnsureNode.interpret(EnsureNode.java:96)
+	at org.jruby.ast.BeginNode.interpret(BeginNode.java:83)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:160)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:164)
+	at org.jruby.internal.runtime.methods.AliasMethod.call(AliasMethod.java:81)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:299)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:117)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:122)
+	at org.jruby.ast.CallNoArgBlockNode.interpret(CallNoArgBlockNode.java:64)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.AttrAssignTwoArgNode.interpret(AttrAssignTwoArgNode.java:36)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:119)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.AndNode.interpret(AndNode.java:94)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.OrNode.interpret(OrNode.java:94)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:180)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:172)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.AndNode.interpret(AndNode.java:90)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:111)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:160)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:164)
+	at org.jruby.RubyClass.finvoke(RubyClass.java:502)
+	at org.jruby.RubyObject.send(RubyObject.java:1437)
+	at org.jruby.RubyObject$i_method_multi$RUBYINVOKER$send.call(org/jruby/RubyObject$i_method_multi$RUBYINVOKER$send.gen:65535)
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodZeroOrOneOrNBlock.call(JavaMethod.java:266)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:113)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:138)
+	at org.jruby.runtime.callsite.SuperCallSite.callBlock(SuperCallSite.java:62)
+	at org.jruby.runtime.callsite.SuperCallSite.call(SuperCallSite.java:69)
+	at org.jruby.ast.ZSuperNode.interpret(ZSuperNode.java:100)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:160)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:164)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:299)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:117)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:122)
+	at org.jruby.ast.CallNoArgBlockNode.interpret(CallNoArgBlockNode.java:64)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.RootNode.interpret(RootNode.java:129)
+	at org.jruby.Ruby.loadFile(Ruby.java:2539)
+	at org.jruby.runtime.load.ExternalScript.load(ExternalScript.java:61)
+	at org.jruby.runtime.load.LoadService.tryLoadingLibraryOrScript(LoadService.java:671)
+	at org.jruby.runtime.load.LoadService.smartLoad(LoadService.java:314)
+	at org.jruby.runtime.load.LoadService.require(LoadService.java:357)
+	at org.jruby.runtime.load.LoadService.lockAndRequire(LoadService.java:289)
+	at org.jruby.RubyKernel.requireCommon(RubyKernel.java:984)
+	at org.jruby.RubyKernel.require(RubyKernel.java:967)
+	at org.jruby.RubyKernel$s_method_1_0$RUBYFRAMEDINVOKER$require.call(org/jruby/RubyKernel$s_method_1_0$RUBYFRAMEDINVOKER$require.gen:65535)
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodOneOrNBlock.call(JavaMethod.java:319)
+	at org.jruby.internal.runtime.methods.AliasMethod.call(AliasMethod.java:61)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at ruby.jit.require_120F9897B5F59B6B5FA66BC56E0277183EA7EAA5.rescue_1$RUBY$__rescue___0(custom_require.rb:31)
+	at ruby.jit.require_120F9897B5F59B6B5FA66BC56E0277183EA7EAA5.__file__(custom_require.rb)
+	at ruby.jit.require_120F9897B5F59B6B5FA66BC56E0277183EA7EAA5.__file__(custom_require.rb)
+	at org.jruby.internal.runtime.methods.JittedMethod.call(JittedMethod.java:153)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.FCallOneArgNode.interpret(FCallOneArgNode.java:36)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:201)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:180)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:319)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:157)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:162)
+	at org.jruby.RubyClass$SpecificArityNew.call(RubyClass.java:804)
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:186)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.RootNode.interpret(RootNode.java:129)
+	at org.jruby.Ruby.evalScriptlet(Ruby.java:312)
+	at org.jruby.Ruby.evalScriptlet(Ruby.java:289)
+	at com.sun.grizzly.jruby.rack.RailsApplication.createApplicationObject(RailsApplication.java:65)
+	at com.sun.grizzly.jruby.rack.RailsApplication.<init>(RailsApplication.java:48)
+	at com.sun.grizzly.jruby.rack.RackApplicationPoolFactory.newApplication(RackApplicationPoolFactory.java:93)
+	at com.sun.grizzly.jruby.rack.RackApplicationPoolFactory.getRackApplocationPool(RackApplicationPoolFactory.java:66)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter.startJRubyRuntime(RackGrizzlyAdapter.java:124)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter.access$000(RackGrizzlyAdapter.java:69)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter$1.call(RackGrizzlyAdapter.java:109)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter$1.call(RackGrizzlyAdapter.java:106)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 13 ms ago.
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `initialize'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `jdbc_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/jdbc_adapter/jdbc_mysql.rb:21:in `mysql_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+	 ... 19 levels...
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from <script>:1
+
+/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:326:in `initialize': The driver encountered an error: com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2666)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jruby.javasupport.JavaMethod.invokeDirectWithExceptionHandling(JavaMethod.java:533)
+	at org.jruby.javasupport.JavaMethod.invokeDirect(JavaMethod.java:383)
+	at org.jruby.java.invokers.InstanceMethodInvoker.call(InstanceMethodInvoker.java:68)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:329)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:188)
+	at org.jruby.ast.CallTwoArgNode.interpret(CallTwoArgNode.java:59)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.RescueBodyNode.interpret(RescueBodyNode.java:108)
+	at org.jruby.ast.RescueNode.handleException(RescueNode.java:164)
+	at org.jruby.ast.RescueNode.interpretWithJavaExceptions(RescueNode.java:121)
+	at org.jruby.ast.RescueNode.interpret(RescueNode.java:110)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:262)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:204)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:349)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:228)
+	at org.jruby.ast.CallThreeArgNode.interpret(CallThreeArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.runtime.InterpretedBlock.evalBlockBody(InterpretedBlock.java:373)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:327)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:366)
+	at org.jruby.runtime.BlockBody.call(BlockBody.java:71)
+	at org.jruby.runtime.Block.call(Block.java:85)
+	at org.jruby.java.proxies.JavaInterfaceTemplate$11.call(JavaInterfaceTemplate.java:383)
+	at org.jruby.javasupport.util.RuntimeHelpers$MethodMissingMethod.call(RuntimeHelpers.java:401)
+	at anon_class19768486_97743500.newConnection(anon_class19768486_97743500.gen:13)
+	at jdbc_adapter.RubyJdbcConnection.reconnect(RubyJdbcConnection.java:423)
+	at jdbc_adapter.RubyJdbcConnection.connection(RubyJdbcConnection.java:171)
+	at jdbc_adapter.RubyJdbcConnection$i_method_0_0$RUBYINVOKER$connection.call(jdbc_adapter/RubyJdbcConnection$i_method_0_0$RUBYINVOKER$connection.gen:65535)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.RescueNode.executeBody(RescueNode.java:199)
+	at org.jruby.ast.RescueNode.interpretWithJavaExceptions(RescueNode.java:118)
+	at org.jruby.ast.RescueNode.interpret(RescueNode.java:110)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:201)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:180)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:319)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:157)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:162)
+	at org.jruby.RubyClass$SpecificArityNew.call(RubyClass.java:804)
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:186)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.LocalAsgnNode.interpret(LocalAsgnNode.java:123)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:119)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:283)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:212)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:359)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:237)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:242)
+	at org.jruby.RubyClass$SpecificArityNew.call(RubyClass.java:826)
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:202)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:349)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:228)
+	at org.jruby.ast.CallThreeArgNode.interpret(CallThreeArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:180)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:172)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.FCallOneArgNode.interpret(FCallOneArgNode.java:36)
+	at org.jruby.ast.LocalAsgnNode.interpret(LocalAsgnNode.java:123)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:201)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:180)
+	at org.jruby.internal.runtime.methods.AliasMethod.call(AliasMethod.java:86)
+	at org.jruby.RubyClass.finvoke(RubyClass.java:542)
+	at org.jruby.RubyObject.send(RubyObject.java:1443)
+	at org.jruby.RubyObject$i_method_multi$RUBYINVOKER$send.call(org/jruby/RubyObject$i_method_multi$RUBYINVOKER$send.gen:65535)
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodZeroOrOneOrTwoOrNBlock.call(JavaMethod.java:283)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:329)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:188)
+	at org.jruby.ast.CallTwoArgNode.interpret(CallTwoArgNode.java:59)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.LocalAsgnNode.interpret(LocalAsgnNode.java:123)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:117)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:119)
+	at org.jruby.ast.DAsgnNode.interpret(DAsgnNode.java:110)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.runtime.InterpretedBlock.evalBlockBody(InterpretedBlock.java:373)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:346)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:303)
+	at org.jruby.runtime.Block.yield(Block.java:194)
+	at org.jruby.RubyKernel.loop_1_9(RubyKernel.java:1251)
+	at org.jruby.RubyKernel$s_method_0_0$RUBYFRAMEDINVOKER$loop_1_9.call(org/jruby/RubyKernel$s_method_0_0$RUBYFRAMEDINVOKER$loop_1_9.gen:65535)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:299)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:117)
+	at org.jruby.runtime.callsite.CachingCallSite.callIter(CachingCallSite.java:132)
+	at org.jruby.ast.FCallNoArgBlockNode.interpret(FCallNoArgBlockNode.java:32)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.runtime.InterpretedBlock.evalBlockBody(InterpretedBlock.java:373)
+	at org.jruby.runtime.InterpretedBlock.yield(InterpretedBlock.java:294)
+	at org.jruby.runtime.InterpretedBlock.yieldSpecific(InterpretedBlock.java:228)
+	at org.jruby.runtime.Block.yieldSpecific(Block.java:99)
+	at org.jruby.ast.ZYieldNode.interpret(ZYieldNode.java:25)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.EnsureNode.interpret(EnsureNode.java:96)
+	at org.jruby.ast.BeginNode.interpret(BeginNode.java:83)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:160)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:164)
+	at org.jruby.internal.runtime.methods.AliasMethod.call(AliasMethod.java:81)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:299)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:117)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:122)
+	at org.jruby.ast.CallNoArgBlockNode.interpret(CallNoArgBlockNode.java:64)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.AttrAssignTwoArgNode.interpret(AttrAssignTwoArgNode.java:36)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:119)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.AndNode.interpret(AndNode.java:94)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.OrNode.interpret(OrNode.java:94)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:180)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:172)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.AndNode.interpret(AndNode.java:90)
+	at org.jruby.ast.IfNode.interpret(IfNode.java:111)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:160)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:164)
+	at org.jruby.RubyClass.finvoke(RubyClass.java:502)
+	at org.jruby.RubyObject.send(RubyObject.java:1437)
+	at org.jruby.RubyObject$i_method_multi$RUBYINVOKER$send.call(org/jruby/RubyObject$i_method_multi$RUBYINVOKER$send.gen:65535)
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodZeroOrOneOrNBlock.call(JavaMethod.java:266)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:113)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:138)
+	at org.jruby.runtime.callsite.SuperCallSite.callBlock(SuperCallSite.java:62)
+	at org.jruby.runtime.callsite.SuperCallSite.call(SuperCallSite.java:69)
+	at org.jruby.ast.ZSuperNode.interpret(ZSuperNode.java:100)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:160)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:164)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:299)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:117)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:122)
+	at org.jruby.ast.CallNoArgBlockNode.interpret(CallNoArgBlockNode.java:64)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.ast.RootNode.interpret(RootNode.java:129)
+	at org.jruby.Ruby.loadFile(Ruby.java:2539)
+	at org.jruby.runtime.load.ExternalScript.load(ExternalScript.java:61)
+	at org.jruby.runtime.load.LoadService.tryLoadingLibraryOrScript(LoadService.java:671)
+	at org.jruby.runtime.load.LoadService.smartLoad(LoadService.java:314)
+	at org.jruby.runtime.load.LoadService.require(LoadService.java:357)
+	at org.jruby.runtime.load.LoadService.lockAndRequire(LoadService.java:289)
+	at org.jruby.RubyKernel.requireCommon(RubyKernel.java:984)
+	at org.jruby.RubyKernel.require(RubyKernel.java:967)
+	at org.jruby.RubyKernel$s_method_1_0$RUBYFRAMEDINVOKER$require.call(org/jruby/RubyKernel$s_method_1_0$RUBYFRAMEDINVOKER$require.gen:65535)
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodOneOrNBlock.call(JavaMethod.java:319)
+	at org.jruby.internal.runtime.methods.AliasMethod.call(AliasMethod.java:61)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at ruby.jit.require_120F9897B5F59B6B5FA66BC56E0277183EA7EAA5.rescue_1$RUBY$__rescue___0(custom_require.rb:31)
+	at ruby.jit.require_120F9897B5F59B6B5FA66BC56E0277183EA7EAA5.__file__(custom_require.rb)
+	at ruby.jit.require_120F9897B5F59B6B5FA66BC56E0277183EA7EAA5.__file__(custom_require.rb)
+	at org.jruby.internal.runtime.methods.JittedMethod.call(JittedMethod.java:153)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.FCallOneArgNode.interpret(FCallOneArgNode.java:36)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.VCallNode.interpret(VCallNode.java:85)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:201)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:180)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:319)
+	at org.jruby.runtime.callsite.CachingCallSite.callBlock(CachingCallSite.java:157)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:162)
+	at org.jruby.RubyClass$SpecificArityNew.call(RubyClass.java:804)
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:186)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:309)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:148)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.BlockNode.interpret(BlockNode.java:71)
+	at org.jruby.internal.runtime.methods.InterpretedMethod.call(InterpretedMethod.java:139)
+	at org.jruby.internal.runtime.methods.DefaultMethod.call(DefaultMethod.java:156)
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:289)
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:108)
+	at org.jruby.ast.CallNoArgNode.interpret(CallNoArgNode.java:61)
+	at org.jruby.ast.CallOneArgNode.interpret(CallOneArgNode.java:57)
+	at org.jruby.ast.NewlineNode.interpret(NewlineNode.java:104)
+	at org.jruby.ast.RootNode.interpret(RootNode.java:129)
+	at org.jruby.Ruby.evalScriptlet(Ruby.java:312)
+	at org.jruby.Ruby.evalScriptlet(Ruby.java:289)
+	at com.sun.grizzly.jruby.rack.RailsApplication.createApplicationObject(RailsApplication.java:65)
+	at com.sun.grizzly.jruby.rack.RailsApplication.<init>(RailsApplication.java:48)
+	at com.sun.grizzly.jruby.rack.RackApplicationPoolFactory.newApplication(RackApplicationPoolFactory.java:93)
+	at com.sun.grizzly.jruby.rack.RackApplicationPoolFactory.getRackApplocationPool(RackApplicationPoolFactory.java:66)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter.startJRubyRuntime(RackGrizzlyAdapter.java:124)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter.access$000(RackGrizzlyAdapter.java:69)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter$1.call(RackGrizzlyAdapter.java:109)
+	at com.sun.grizzly.jruby.RackGrizzlyAdapter$1.call(RackGrizzlyAdapter.java:106)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 13 ms ago. (RuntimeError)
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `initialize'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `jdbc_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/jdbc_adapter/jdbc_mysql.rb:21:in `mysql_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+	 ... 19 levels...
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from <script>:1
+	...internal jruby stack elided...
+	from ActiveRecord::ConnectionAdapters::JdbcConnection.initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453)
+	from (unknown).new(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453)
+	from ActiveRecord::ConnectionAdapters::JdbcAdapter.initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49)
+	from (unknown).new(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49)
+	from JdbcSpec::ActiveRecordExtensions.jdbc_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/jdbc_adapter/jdbc_mysql.rb:21)
+	from JdbcSpec::ActiveRecordExtensions.mysql_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.new_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout_new_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:184)
+	from Kernel.loop(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:184)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/monitor.rb:191)
+	from MonitorMixin.mon_synchronize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:183)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:98)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:326)
+	from ActiveRecord::ConnectionAdapters::ConnectionHandler.retrieve_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:123)
+	from #<Class:01xb7cee4>.retrieve_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:115)
+	from #<Class:01xb7cee4>.connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/app/models/page.rb:204)
+	from #<Class:01x1274069>.load_subclasses(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/lib/radiant/extension_loader.rb:100)
+	from Radiant::ExtensionLoader.activate_extensions(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/lib/radiant/initializer.rb:184)
+	from Radiant::Initializer.after_initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/railties/lib/initializer.rb:179)
+	from Rails::Initializer.process(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/railties/lib/initializer.rb:113)
+	from #<Class:01x106def2>.run(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/lib/radiant/initializer.rb:148)
+	from #<Class:01xb16f5f>.run(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/radiantblog/config/environment.rb:12)
+	from (unknown).(unknown)(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/radiantblog/config/environment.rb:31)
+	from Kernel.require(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31)
+	from Kernel.require(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/rack/adapter/rails.rb:98)
+	from Rack::Adapter::Rails.load_application(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/rack/adapter/rails.rb:75)
+	from Rack::Adapter::Rails.initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25)
+	from (unknown).new(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25)
+	from #<Class:01x123baa0>.new(<script>:1)
+	from (unknown).(unknown)(:1)
+Jun 22, 2010 11:35:17 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:35:17 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:35:48 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:35:51 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:40:17 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:40:20 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:41:39 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:41:42 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:42:13 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:42:16 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:42:16 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:42:18 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 22, 2010 11:42:19 PM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:01:39 AM com.sun.enterprise.v3.server.AppServerStartup run
+INFO: GlassFish v3 (74b) startup time : Embedded(450ms) startup services(312ms) total(762ms)
+Jun 23, 2010 1:01:39 AM AppServerStartup run
+INFO: [Thread[GlassFish Kernel Main Thread,5,main]] started
+Jun 23, 2010 1:01:39 AM org.hibernate.validator.util.Version <clinit>
+INFO: Hibernate Validator null
+Jun 23, 2010 1:01:40 AM org.glassfish.kernel.config.DefaultConfigParser$2 run
+INFO: interface org.glassfish.scripting.jruby.config.JrubyContainer
+Jun 23, 2010 1:01:40 AM org.glassfish.scripting.jruby.JRubyConfigImpl <init>
+INFO: Running radiantblog in development environment.
+Jun 23, 2010 1:01:40 AM org.glassfish.scripting.jruby.RackApplicationChooser detectRails
+INFO: Rails application detected.
+Jun 23, 2010 1:01:40 AM org.glassfish.scripting.jruby.JRubyApplication <init>
+INFO: Loading application radiantblog at /
+Jun 23, 2010 1:01:40 AM com.sun.grizzly.jruby.RackGrizzlyAdapter <init>
+INFO: JRuby version is: 1.5.0
+Jun 23, 2010 1:01:40 AM com.sun.enterprise.v3.services.impl.GrizzlyProxy$2$1 onReady
+INFO: Grizzly Framework 1.9.18-k started in: 230ms listening on port 8080
+Jun 23, 2010 1:01:45 AM com.sun.grizzly.jruby.rack.RackApplicationPoolFactory getRackApplocationPool
+SEVERE: The driver encountered an error: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `initialize'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `jdbc_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/jdbc_adapter/jdbc_mysql.rb:21:in `mysql_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+	 ... 19 levels...
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from <script>:1
+
+/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:326:in `initialize': The driver encountered an error: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO) (RuntimeError)
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453:in `initialize'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49:in `jdbc_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/jdbc_adapter/jdbc_mysql.rb:21:in `mysql_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+	 ... 19 levels...
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25:in `new'
+	from <script>:1
+	...internal jruby stack elided...
+	from ActiveRecord::ConnectionAdapters::JdbcConnection.initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453)
+	from (unknown).new(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:453)
+	from ActiveRecord::ConnectionAdapters::JdbcAdapter.initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49)
+	from (unknown).new(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/active_record/connection_adapters/jdbc_adapter.rb:49)
+	from JdbcSpec::ActiveRecordExtensions.jdbc_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/activerecord-jdbc-adapter-0.9.2/lib/jdbc_adapter/jdbc_mysql.rb:21)
+	from JdbcSpec::ActiveRecordExtensions.mysql_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.new_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout_new_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:184)
+	from Kernel.loop(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:184)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/monitor.rb:191)
+	from MonitorMixin.mon_synchronize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:183)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.checkout(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:98)
+	from ActiveRecord::ConnectionAdapters::ConnectionPool.connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:326)
+	from ActiveRecord::ConnectionAdapters::ConnectionHandler.retrieve_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:123)
+	from #<Class:01x1ac8b37>.retrieve_connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:115)
+	from #<Class:01x1ac8b37>.connection(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/app/models/page.rb:204)
+	from #<Class:01x3e48f2>.load_subclasses(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/lib/radiant/extension_loader.rb:100)
+	from Radiant::ExtensionLoader.activate_extensions(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/lib/radiant/initializer.rb:184)
+	from Radiant::Initializer.after_initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/railties/lib/initializer.rb:179)
+	from Rails::Initializer.process(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/vendor/rails/railties/lib/initializer.rb:113)
+	from #<Class:01x86359>.run(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/radiant-0.8.2/lib/radiant/initializer.rb:148)
+	from #<Class:01x64dd79>.run(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/radiantblog/config/environment.rb:12)
+	from (unknown).(unknown)(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/radiantblog/config/environment.rb:31)
+	from Kernel.require(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31)
+	from Kernel.require(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/rack/adapter/rails.rb:98)
+	from Rack::Adapter::Rails.load_application(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/rack/adapter/rails.rb:75)
+	from Rack::Adapter::Rails.initialize(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25)
+	from (unknown).new(/home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/gems/1.8/gems/glassfish-1.0.2-universal-java/lib/jruby/rack/rails.rb:25)
+	from #<Class:01xd41f3>.new(<script>:1)
+	from (unknown).(unknown)(:1)
+Jun 23, 2010 1:01:46 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:01:46 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:05:57 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:00 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:01 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:02 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:02 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:02 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:02 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:03 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:03 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:03 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:03 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:03 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:04 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:04 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:04 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:04 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:48 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:06:51 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:07:32 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:07:35 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:08:05 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:08:08 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:08:40 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:09:51 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+Jun 23, 2010 1:09:55 AM com.sun.grizzly.jruby.RackGrizzlyAdapter service
+SEVERE: Failed to create JRuby instance.
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:11:33) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>"/"}
+
+ActiveRecord::ActiveRecordError (Table pages does not exist):
+  radiant (0.8.2) app/models/page.rb:175:in `find_by_url'
+  radiant (0.8.2) app/controllers/site_controller.rb:41:in `find_page'
+  radiant (0.8.2) app/controllers/site_controller.rb:19:in `show_page'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (142.0ms)
+Rendered rescues/_request_and_response (233.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:13:24) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>"/"}
+
+ActiveRecord::ActiveRecordError (Table pages does not exist):
+  radiant (0.8.2) app/models/page.rb:175:in `find_by_url'
+  radiant (0.8.2) app/controllers/site_controller.rb:41:in `find_page'
+  radiant (0.8.2) app/controllers/site_controller.rb:19:in `show_page'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:17:17) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>"/"}
+
+ActiveRecord::ActiveRecordError (Table pages does not exist):
+  radiant (0.8.2) app/models/page.rb:175:in `find_by_url'
+  radiant (0.8.2) app/controllers/site_controller.rb:41:in `find_page'
+  radiant (0.8.2) app/controllers/site_controller.rb:19:in `show_page'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:21:56) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>"/"}
+
+ActiveRecord::ActiveRecordError (Table pages does not exist):
+  radiant (0.8.2) app/models/page.rb:175:in `find_by_url'
+  radiant (0.8.2) app/controllers/site_controller.rb:41:in `find_page'
+  radiant (0.8.2) app/controllers/site_controller.rb:19:in `show_page'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/carl/netbeans-6.9/ruby/jruby-1.5.0/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (89.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRadiantTables (1)
+  [4;36;1mSQL (135.0ms)[0m   [0;1mCREATE TABLE `config` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `key` varchar(40) DEFAULT '' NOT NULL, `value` varchar(255) DEFAULT '') ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (266.0ms)[0m   [0mCREATE UNIQUE INDEX `key` ON `config` (`key`)[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `slug` varchar(100), `breadcrumb` varchar(160), `behavior` varchar(25), `status_id` integer(10) DEFAULT 1 NOT NULL, `parent_id` integer(10), `layout_id` integer(10), `created_at` datetime, `updated_at` datetime, `published_at` datetime, `created_by` integer(10), `updated_by` integer(10)) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (117.0ms)[0m   [0mCREATE TABLE `page_parts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `filter` varchar(25), `content` text, `page_id` integer(10)) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (130.0ms)[0m   [0;1mCREATE TABLE `snippets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100) DEFAULT '' NOT NULL, `filter` varchar(25), `content` text, `created_at` datetime, `updated_at` datetime, `created_by` integer(10), `updated_by` integer(10)) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (317.0ms)[0m   [0mCREATE UNIQUE INDEX `name` ON `snippets` (`name`)[0m
+  [4;36;1mSQL (117.0ms)[0m   [0;1mCREATE TABLE `layouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `content` text, `created_at` datetime, `updated_at` datetime, `created_by` integer(10), `updated_by` integer(10)) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(100), `email` varchar(255), `login` varchar(40) DEFAULT '' NOT NULL, `password` varchar(40), `admin` integer(1) DEFAULT 0 NOT NULL, `developer` integer(1) DEFAULT 0 NOT NULL, `created_at` datetime, `updated_at` datetime, `created_by` integer(10), `updated_by` integer(10)) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (244.0ms)[0m   [0;1mCREATE UNIQUE INDEX `login` ON `users` (`login`)[0m
+  [4;35;1mSQL (56.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to InsertInitialData (2)
+  [4;36;1mSQL (41.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to RenameBehaviorColumn (3)
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW COLUMNS FROM `pages` LIKE 'behavior'[0m
+  [4;36;1mSQL (274.0ms)[0m   [0;1mALTER TABLE `pages` CHANGE `behavior` `behavior_id` varchar(25)[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to RenameFilterColumn (4)
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSHOW COLUMNS FROM `page_parts` LIKE 'filter'[0m
+  [4;35;1mSQL (230.0ms)[0m   [0mALTER TABLE `page_parts` CHANGE `filter` `filter_id` varchar(25)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW COLUMNS FROM `snippets` LIKE 'filter'[0m
+  [4;35;1mSQL (261.0ms)[0m   [0mALTER TABLE `snippets` CHANGE `filter` `filter_id` varchar(25)[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+Migrating to AddVirtualColumnToPage (5)
+  [4;35;1mSQL (252.0ms)[0m   [0mALTER TABLE `pages` ADD `virtual` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('5')[0m
+Migrating to IntegerColumnsToBoolean (6)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` ORDER BY name[0m
+  [4;36;1mSQL (241.0ms)[0m   [0;1mALTER TABLE `users` DROP `admin`[0m
+  [4;35;1mSQL (229.0ms)[0m   [0mALTER TABLE `users` ADD `admin` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+  [4;35;1mSQL (208.0ms)[0m   [0mALTER TABLE `users` DROP `developer`[0m
+  [4;36;1mSQL (225.0ms)[0m   [0;1mALTER TABLE `users` ADD `developer` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('6')[0m
+Migrating to RemoveVirtualColumnFromPage (7)
+  [4;36;1mSQL (222.0ms)[0m   [0;1mALTER TABLE `pages` DROP `virtual`[0m
+  [4;35;1mSQL (52.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('7')[0m
+Migrating to AddVirtualColumnToPageAgain (8)
+  [4;36;1mSQL (213.0ms)[0m   [0;1mALTER TABLE `pages` ADD `virtual` tinyint(1) DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('8')[0m
+Migrating to AddContentTypeFieldToLayout (9)
+  [4;36;1mSQL (235.0ms)[0m   [0;1mALTER TABLE `layouts` ADD `content_type` varchar(40)[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('9')[0m
+Migrating to MergeBehaviorsAndPages (10)
+  [4;36;1mMergeBehaviorsAndPages::OldPage Load (2.0ms)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW COLUMNS FROM `pages` LIKE 'behavior_id'[0m
+  [4;36;1mSQL (212.0ms)[0m   [0;1mALTER TABLE `pages` CHANGE `behavior_id` `type` varchar(25)[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('10')[0m
+Migrating to RenameTypeColumnOnPageToClassName (11)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `pages` LIKE 'type'[0m
+  [4;35;1mSQL (231.0ms)[0m   [0mALTER TABLE `pages` CHANGE `type` `class_name` varchar(25)[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('11')[0m
+Migrating to CreateExtensionMeta (12)
+  [4;35;1mSQL (101.0ms)[0m   [0mCREATE TABLE `extension_meta` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `schema_version` integer(10) DEFAULT 0, `enabled` tinyint(1) DEFAULT 1) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('12')[0m
+Migrating to AddNotesFieldToUser (13)
+  [4;35;1mSQL (215.0ms)[0m   [0mALTER TABLE `users` ADD `notes` text[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('13')[0m
+Migrating to RenameConfigDefaultPartsKey (14)
+  [4;35;1mRadiant::Config Load (3.0ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'default.parts') LIMIT 1[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('14')[0m
+Migrating to AddOptimisticLocking (15)
+  [4;35;1mSQL (228.0ms)[0m   [0mALTER TABLE `pages` ADD `lock_version` integer(10) DEFAULT 0[0m
+  [4;36;1mSQL (226.0ms)[0m   [0;1mALTER TABLE `layouts` ADD `lock_version` integer(10) DEFAULT 0[0m
+  [4;35;1mSQL (192.0ms)[0m   [0mALTER TABLE `snippets` ADD `lock_version` integer(10) DEFAULT 0[0m
+  [4;36;1mSQL (225.0ms)[0m   [0;1mALTER TABLE `users` ADD `lock_version` integer(10) DEFAULT 0[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('15')[0m
+Migrating to AddSessions (16)
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255), `data` text, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (210.0ms)[0m   [0mCREATE INDEX `index_sessions_on_session_id` ON `sessions` (`session_id`)[0m
+  [4;36;1mSQL (226.0ms)[0m   [0;1mCREATE INDEX `index_sessions_on_updated_at` ON `sessions` (`updated_at`)[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('16')[0m
+Migrating to RenameCreatedByUpdatedByColumns (17)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW COLUMNS FROM `pages` LIKE 'created_by'[0m
+  [4;35;1mSQL (232.0ms)[0m   [0mALTER TABLE `pages` CHANGE `created_by` `created_by_id` int(10)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW COLUMNS FROM `pages` LIKE 'updated_by'[0m
+  [4;35;1mSQL (208.0ms)[0m   [0mALTER TABLE `pages` CHANGE `updated_by` `updated_by_id` int(10)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `snippets` LIKE 'created_by'[0m
+  [4;35;1mSQL (240.0ms)[0m   [0mALTER TABLE `snippets` CHANGE `created_by` `created_by_id` int(10)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `snippets` LIKE 'updated_by'[0m
+  [4;35;1mSQL (226.0ms)[0m   [0mALTER TABLE `snippets` CHANGE `updated_by` `updated_by_id` int(10)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `layouts` LIKE 'created_by'[0m
+  [4;35;1mSQL (465.0ms)[0m   [0mALTER TABLE `layouts` CHANGE `created_by` `created_by_id` int(10)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `layouts` LIKE 'updated_by'[0m
+  [4;35;1mSQL (231.0ms)[0m   [0mALTER TABLE `layouts` CHANGE `updated_by` `updated_by_id` int(10)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `users` LIKE 'created_by'[0m
+  [4;35;1mSQL (208.0ms)[0m   [0mALTER TABLE `users` CHANGE `created_by` `created_by_id` int(10)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW COLUMNS FROM `users` LIKE 'updated_by'[0m
+  [4;35;1mSQL (240.0ms)[0m   [0mALTER TABLE `users` CHANGE `updated_by` `updated_by_id` int(10)[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('17')[0m
+Migrating to AddDescriptionAndKeywordsToPages (18)
+  [4;35;1mSQL (219.0ms)[0m   [0mALTER TABLE `pages` ADD `description` varchar(255)[0m
+  [4;36;1mSQL (359.0ms)[0m   [0;1mALTER TABLE `pages` ADD `keywords` varchar(255)[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('18')[0m
+Migrating to AddSaltToUsers (19)
+  [4;36;1mSQL (363.0ms)[0m   [0;1mALTER TABLE `users` ADD `salt` varchar(255)[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `salt` = 'sweet harmonious biscuits' [0m
+  [4;36;1mSQL (37.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('19')[0m
+Migrating to AddSessionInfoToUsers (20)
+  [4;35;1mSQL (209.0ms)[0m   [0mALTER TABLE `users` ADD `session_token` varchar(255)[0m
+  [4;36;1mSQL (225.0ms)[0m   [0;1mALTER TABLE `users` ADD `session_expire` datetime[0m
+  [4;35;1mSQL (49.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+Migrating to RemoveSessionExpireFromUsers (21)
+  [4;36;1mSQL (218.0ms)[0m   [0;1mALTER TABLE `users` DROP `session_expire`[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('21')[0m
+Migrating to AddIndexes (20081203140407)
+  [4;36;1mSQL (233.0ms)[0m   [0;1mCREATE INDEX `pages_class_name` ON `pages` (`class_name`)[0m
+  [4;35;1mSQL (226.0ms)[0m   [0mCREATE INDEX `pages_parent_id` ON `pages` (`parent_id`)[0m
+  [4;36;1mSQL (175.0ms)[0m   [0;1mCREATE INDEX `pages_child_slug` ON `pages` (`slug`, `parent_id`)[0m
+  [4;35;1mSQL (227.0ms)[0m   [0mCREATE INDEX `pages_published` ON `pages` (`virtual`, `status_id`)[0m
+  [4;36;1mSQL (231.0ms)[0m   [0;1mCREATE INDEX `parts_by_page` ON `page_parts` (`page_id`, `name`)[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081203140407')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRadiantTables (1)
+Migrating to InsertInitialData (2)
+Migrating to RenameBehaviorColumn (3)
+Migrating to RenameFilterColumn (4)
+Migrating to AddVirtualColumnToPage (5)
+Migrating to IntegerColumnsToBoolean (6)
+Migrating to RemoveVirtualColumnFromPage (7)
+Migrating to AddVirtualColumnToPageAgain (8)
+Migrating to AddContentTypeFieldToLayout (9)
+Migrating to MergeBehaviorsAndPages (10)
+Migrating to RenameTypeColumnOnPageToClassName (11)
+Migrating to CreateExtensionMeta (12)
+Migrating to AddNotesFieldToUser (13)
+Migrating to RenameConfigDefaultPartsKey (14)
+Migrating to AddOptimisticLocking (15)
+Migrating to AddSessions (16)
+Migrating to RenameCreatedByUpdatedByColumns (17)
+Migrating to AddDescriptionAndKeywordsToPages (18)
+Migrating to AddSaltToUsers (19)
+Migrating to AddSessionInfoToUsers (20)
+Migrating to RemoveSessionExpireFromUsers (21)
+Migrating to AddIndexes (20081203140407)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') ORDER BY name LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `users` (`name`, `email`, `login`, `password`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `admin`, `developer`, `notes`, `lock_version`, `salt`, `session_token`) VALUES('root', NULL, 'root', '9b8d327f7dbd99168baf2c3fd32164632e20af8c', '2010-06-23 08:25:11', '2010-06-23 08:25:11', NULL, NULL, 1, 0, NULL, 0, '8935c37bd946e08257c27e687c74529109285f80', NULL)[0m
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.title') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `config` (`key`, `value`) VALUES('admin.title', 'Radiant CMS')[0m
+Cache write: Radiant.cache_file
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+  [4;35;1mRadiant::Config Load (1.0ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.subtitle') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `config` (`key`, `value`) VALUES('admin.subtitle', 'Publishing for Small Teams')[0m
+Cache write: Radiant.cache_file
+  [4;35;1mRadiant::Config Load (1.0ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'defaults.page.parts') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `config` (`key`, `value`) VALUES('defaults.page.parts', 'body, extended')[0m
+Cache write: Radiant.cache_file
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+  [4;35;1mRadiant::Config Load (0.0ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'defaults.page.status') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `config` (`key`, `value`) VALUES('defaults.page.status', 'draft')[0m
+Cache write: Radiant.cache_file
+  [4;35;1mRadiant::Config Load (0.0ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'defaults.page.filter') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `config` (`key`, `value`) VALUES('defaults.page.filter', '')[0m
+Cache write: Radiant.cache_file
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+  [4;35;1mRadiant::Config Load (1.0ms)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'session_timeout') LIMIT 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO `config` (`key`, `value`) VALUES('session_timeout', '1209600')[0m
+Cache write: Radiant.cache_file
+  [4;35;1mRadiant::Config Load (1.0ms)[0m   [0mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (2.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'header') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('header', '', '<div id=\"header\">\n<img src=\"http://spurrd.com/assets/120/banner.jpg\" width=\"900px\" alt=\"Your Company\" />\n</div>\n', '2008-12-24 01:08:44', '2009-01-02 07:01:43', 1, NULL, 9)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'footer') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('footer', '', 'Copyright &copy; <r:date format=\"%Y\" /> your company. All rights reserved | <a href=\"mailto:info@yourcompany.com\">Contact</a> | <a href=\"/sitemap\">Site Map</a> | Powered by <a href=\"http://radiantcms.org/\">Radiant</a>\n', '2008-12-24 01:08:44', '2009-01-02 07:45:16', 1, NULL, 5)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'navigation') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('navigation', '', '<ul>\r\n <r:navigation urls=\"Home: /\">\r\n <r:normal><li><a href=\"<r:url />\"><r:title /></a></li></r:normal>\r\n <r:here><li class=\"selected\"><a href=\"<r:url />\"><r:title /></a></li></r:here>\r\n <r:selected><li><a href=\"<r:url />\"><r:title /></a></li></r:selected>\r\n </r:navigation>\r\n <r:navigation urls=\"Tour: /tour | News: /news | Locations: /locations | About: /about\">\r\n <r:normal><li><a href=\"<r:url />\"><r:title /></a></li></r:normal>\r\n <r:here><li class=\"selected\"><a href=\"<r:url />\"><r:title /></a></li></r:here>\r\n <r:selected><li class=\"selected\"><a href=\"<r:url />\"><r:title /></a></li></r:selected>\r\n </r:navigation>\r\n</ul> ', '2008-12-30 21:38:09', '2009-01-02 07:45:54', 1, NULL, 9)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'newsletter') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('newsletter', '', '<div class=\"box\">\n <h3>Our Newsletter</h3>\n <input class=\"email\" value=\"Enter your email address...\" type=\"text\" onfocus=\"this.value=\'\'\" id=\"\" name=\"\" />\n <input class=\"subscribe\" type=\"submit\" value=\"Subscribe\" />\n</div>', '2008-12-31 01:08:12', '2009-01-02 06:11:14', 1, NULL, 19)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'rss') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('rss', '', '<img src=\"http://spurrd.com/assets/147/rss.gif\" />\n<h3>RSS</h3>\n<p>Get the <a href=\"/rss/\">feed</a> for our latest news. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>\n', '2008-12-31 07:04:11', '2009-01-02 07:05:37', 1, NULL, 5)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'articles') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('articles', '', '<r:find url=\"/news\">\n <r:children:each order=\"desc\" limit=\"3\">\n <div class=\"entry\">\n <h3><r:link /></h3>\n <div class=\"posted\">\n Posted by <r:author /> on <r:date format=\"%B %d, %Y\" /><em>|</em><img src=\"http://spurrd.com/assets/123/comment.png\" /><a href=\"<r:url />#disqus_thread\">Comments</a><em>|</em><r:link>Read full article</r:link> \n </div>\n <r:content part=\"summary\" />\n </div>\n </r:children:each>\n</r:find>\n\n<r:snippet name=\"comments_summary\" />', '2009-01-01 22:40:23', '2009-01-02 07:19:28', 1, NULL, 19)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'sitemap') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('sitemap', '', ' <r:children:each by=\"title\" order=\"asc\">\r\n <r:unless_content part=\"no-map\">\r\n <li>\r\n <r:link />\r\n <r:if_children>\r\n <ul class=\"second\">\r\n <r:snippet name=\"sitemap\" />\r\n </ul>\r\n </r:if_children>\r\n </li>\r\n </r:unless_content>\r\n </r:children:each>\r\n\r\n', '2009-01-01 23:51:52', '2009-01-02 00:45:01', 1, NULL, 14)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'comments') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('comments', '', '<img src=\"http://spurrd.com/assets/126/comments.jpg\" />\n\n<div id=\"disqus_thread\"></div><r:comment><script type=\"text/javascript\" src=\"http://disqus.com/forums/radiant/embed.js\"></script><noscript><a href=\"http://radiant.disqus.com/?url=ref\">View the discussion thread.</a></noscript></r:comment><a href=\"http://disqus.com\" class=\"dsq-brlink\">blog comments powered by <span class=\"logo-disqus\">Disqus</span></a>', '2009-01-02 02:17:21', '2009-01-02 07:20:55', 1, NULL, 3)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'comments_summary') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('comments_summary', '', '﻿﻿﻿﻿<script type=\"text/javascript\">\r\n//<![CDATA[\r\n(function() {\r\n		var links = document.getElementsByTagName(\'a\');\r\n		var query = \'?\';\r\n		for(var i = 0; i < links.length; i++) {\r\n			if(links[i].href.indexOf(\'#disqus_thread\') >= 0) {\r\n				query += \'url\' + i + \'=\' + encodeURIComponent(links[i].href) + \'&\';\r\n			}\r\n		}\r\n		document.write(\'<script type=\"text/javascript\" src=\"http://disqus.com/forums/radiant/get_num_replies.js\' + query + \'\"></\' + \'script>\');\r\n	})();\r\n//]]>\r\n</script>\r\n\r\n', '2009-01-02 02:18:23', '2009-01-02 02:59:44', 1, NULL, 4)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT `snippets`.id FROM `snippets` WHERE (`snippets`.`name` = 'posted') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `snippets` (`name`, `filter_id`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `lock_version`) VALUES('posted', '', '<div class=\"posted\">Posted by <r:author /> on <r:date format=\"%B %d, %Y\" /><em>|</em><img src=\"http://spurrd.com/assets/123/comment.png\" /><a href=\"<r:url />#disqus_thread\">Comments</a></div>', '2009-01-02 07:32:00', '2009-01-02 07:32:00', 1, NULL, 0)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (3.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = '/' AND `pages`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Home Page', '/', 'Home', 'Page', 100, NULL, 1, '2008-12-24 01:08:45', '2009-01-02 07:38:13', '2008-12-23 18:08:45', 1, NULL, 0, 78, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'file-not-found' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('File Not Found', 'file-not-found', 'File Not Found', 'FileNotFoundPage', 100, 1, NULL, '2008-12-24 01:08:45', '2008-12-24 01:08:45', '2008-12-23 18:08:45', 1, NULL, 1, 0, NULL, NULL)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'rss' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('RSS Feed', 'rss', 'RSS Feed', NULL, 100, 1, 3, '2008-12-24 01:08:45', '2008-12-24 01:08:45', '2008-12-23 18:08:45', 1, NULL, 0, 0, NULL, NULL)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'news' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Articles', 'news', 'News', 'ArchivePage', 100, 1, NULL, '2008-12-24 01:08:45', '2009-01-02 07:27:53', '2008-12-23 18:08:45', 1, NULL, 0, 18, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'new-location-opening-tonight' AND `pages`.parent_id = 4) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('New location opening tonight', 'new-location-opening-tonight', 'New location opening tonight', 'Page', 100, 4, NULL, '2008-12-24 01:08:45', '2009-01-02 09:27:43', '2006-06-09 00:00:00', 1, NULL, 0, 16, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'grass-fed-foam-from-jersey' AND `pages`.parent_id = 4) LIMIT 1[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Grass-fed foam from Jersey', 'grass-fed-foam-from-jersey', 'Grass-fed foam from Jersey', 'Page', 100, 4, NULL, '2008-12-24 01:08:45', '2009-01-02 07:31:42', '2006-06-10 00:00:00', 1, NULL, 0, 8, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'styles.css' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Styles', 'styles.css', 'Styles', 'Page', 100, 1, 2, '2008-12-24 01:08:45', '2009-01-02 10:00:35', '2008-12-23 18:08:45', 1, NULL, 0, 5, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'the-finest-grind' AND `pages`.parent_id = 4) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('The Finest grind', 'the-finest-grind', 'The Finest grind', 'Page', 100, 4, NULL, '2008-12-24 01:08:45', '2009-01-02 09:27:11', '2008-12-23 18:08:45', 1, NULL, 0, 11, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'about' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('About', 'about', 'About', 'Page', 100, 1, NULL, '2008-12-24 01:08:45', '2009-01-02 09:22:02', '2008-12-23 18:08:45', 1, NULL, 0, 9, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'monthly-archives' AND `pages`.parent_id = 4) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('%B %Y Archives', 'monthly-archives', 'Monthly Archives', 'ArchiveMonthIndexPage', 100, 4, NULL, '2008-12-24 01:08:45', '2009-01-02 07:29:46', '2008-12-23 18:08:45', 1, NULL, 1, 9, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'sitemap' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Site Map', 'sitemap', 'Site Map', 'Page', 100, 1, NULL, '2009-01-01 23:49:07', '2009-01-02 01:31:41', '2009-01-01 16:49:07', 1, NULL, 0, 11, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'locations' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Locations', 'locations', 'Locations', 'Page', 100, 1, NULL, '2009-01-02 02:11:32', '2009-01-02 04:08:35', '2009-01-01 19:11:32', 1, NULL, 0, 8, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'tour' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Tour', 'tour', 'Tour', 'Page', 100, 1, NULL, '2009-01-02 07:36:32', '2009-01-02 09:48:51', '2009-01-02 00:49:40', 1, NULL, 0, 25, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = 'reset.css' AND `pages`.parent_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `pages` (`title`, `slug`, `breadcrumb`, `class_name`, `status_id`, `parent_id`, `layout_id`, `created_at`, `updated_at`, `published_at`, `created_by_id`, `updated_by_id`, `virtual`, `lock_version`, `description`, `keywords`) VALUES('Reset', 'reset.css', 'Reset', 'Page', 100, 1, 2, '2009-01-02 10:00:27', '2009-01-02 10:06:13', '2009-01-02 03:06:13', 1, NULL, 0, 2, '', '')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mLayout Load (0.0ms)[0m   [0;1mSELECT `layouts`.id FROM `layouts` WHERE (`layouts`.`name` = 'Normal') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `layouts` (`name`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `content_type`, `lock_version`) VALUES('Normal', '<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\"\n \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n<html>\n <head>\n <title><r:title /></title>\n <link href=\"/rss/\" rel=\"alternate\" title=\"RSS\" type=\"application/rss+xml\" />\n <link rel=\"stylesheet\" type=\"text/css\" href=\"/reset.css\" />\n <link rel=\"stylesheet\" type=\"text/css\" href=\"/styles.css\" />\n <script type=\"text/javascript\" src=\"http://www.jeroenwijering.com/embed/swfobject.js\"></script>\n <script type=\"text/javascript\" src=\"http://spurrd.com/javascripts/prototype.js\"></script>\n <script type=\"text/javascript\" src=\"http://spurrd.com/javascripts/scriptaculous.js?load=effects,builder\"></script>\n <script type=\"text/javascript\" src=\"http://spurrd.com/javascripts/lightbox.js\"></script>\n\n <!--[if IE 6]>\n <style type=\"text/css\" media=\"screen\">\n @import url(\"/stylesheets/ie6.css\");\n </style>\n <![endif]-->\n\n <!--[if IE 7]>\n <style type=\"text/css\" media=\"screen\">\n @import url(\"/stylesheets/ie7.css\");\n </style>\n <![endif]-->\n\n </head>\n <body>\n <div id=\"page\">\n <r:snippet name=\"header\" />\n <div id=\"nav\">\n <r:snippet name=\"navigation\" />\n </div>\n <div id=\"main\">\n <div id=\"content-wrapper\">\n <div id=\"content\">\n <r:content />\n <r:if_content part=\"extended\">\n <div id=\"extended\">\n <r:content part=\"extended\" />\n </div>\n </r:if_content>\n </div>\n </div>\n <div id=\"sidebar-wrapper\">\n <div id=\"sidebar\">\n <r:content part=\"sidebar\" inherit=\"true\" />\n </div>\n </div>\n </div>\n <div style=\"clear:both\"></div>\n </div>\n </body>\n <div id=\"footer-wrapper\">\n <div id=\"footer\">\n <r:snippet name=\"footer\" />\n </div>\n </div>\n</html>\n', '2008-12-24 01:08:45', '2009-01-02 10:07:28', 1, NULL, '', 35)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mLayout Load (1.0ms)[0m   [0;1mSELECT `layouts`.id FROM `layouts` WHERE (`layouts`.`name` = 'Stylesheet') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `layouts` (`name`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `content_type`, `lock_version`) VALUES('Stylesheet', '<r:content />\n', '2008-12-24 01:08:45', '2009-01-02 10:00:53', 1, NULL, 'text/css', 1)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mLayout Load (1.0ms)[0m   [0;1mSELECT `layouts`.id FROM `layouts` WHERE (`layouts`.`name` = 'XML Feed') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `layouts` (`name`, `content`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`, `content_type`, `lock_version`) VALUES('XML Feed', '<r:content />\n', '2008-12-24 01:08:45', '2008-12-24 01:08:45', 1, NULL, 'text/xml', 0)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '<div id=\"extra\">\n <div class=\"box\">\n <div id=\"player\">\n <script type=\"text/javascript\">\n var so = new SWFObject(\'/video/player.swf\',\'mpl\',\'200\',\'145\',\'8\');\n so.addParam(\'allowscriptaccess\',\'always\');\n so.addParam(\'allowfullscreen\',\'true\');\n so.addParam(\'flashvars\',\'&file=http://content.bitsontherun.com/videos/3ta6fhJQ.flv&image=http://spurrd.com/assets/138/preview.jpg&controlbar=none\');\n so.write(\'player\');\n </script>\n </div>\n<h2>Yummy!</h2>\n <p><span>Vivamust consumey morfoamy.</span><br /> In portor auctor neque. Morbi gravida elit non ante. Praesent eros elit, consequat et, rhoncuses atet, rhoncus posuere, massa. Praesent tempor, felis varius gravida!</p>\n </div>\n</div>\n\n<r:snippet name=\"articles\" />\n', 1)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', 'Textile', 'The file you were looking for could not be found.\n\nAttempted URL: @<r:attempted_url />@\n\nIt is possible that you typed the URL incorrectly or that you clicked on a bad link.\n\n\"<< Back to Home Page\":/\n', 2)[0m
+WARNING: Can't mass-assign these protected attributes: id
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\">\n <channel>\n <title>Article RSS Feed</title>\n <link>http://your-web-site.com<r:url /></link>\n <language>en-us</language>\n <ttl>40</ttl>\n <description>The main blog feed for my Web site.</description>\n <r:find url=\"/news/\">\n <r:children:each limit=\"10\" order=\"desc\">\n <item>\n <title><r:title /></title>\n <description><r:escape_html><r:content /></r:escape_html></description>\n <pubDate><r:rfc1123_date /></pubDate>\n <guid>http://your-web-site.com<r:url /></guid>\n <link>http://your-web-site.com<r:url /></link>\n </item>\n </r:children:each>\n </r:find>\n </channel>\n</rss>\n', 3)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '<r:children:each limit=\"5\" order=\"desc\">\n<div class=\"entry\">\n <h3><r:link /></h3>\n <div class=\"posted\">\n Posted by <r:author /> on <r:date format=\"%B %d, %Y\" /><em>|</em><img src=\"http://spurrd.com/assets/123/comment.png\" /><a href=\"<r:url />#disqus_thread\">Comments</a><em>|</em><r:link>Read full article</r:link> \n </div>\n <r:content part=\"summary\" />\n</div>\n</r:children:each>\n\n<r:snippet name=\"comments_summary\" />', 4)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', 'Textile', '<h3><r:title /></h3>\n<r:snippet name=\"posted\" />\n\nAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\nTemporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.\n\n<r:snippet name=\"comments\" />\n', 5)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', 'Textile', '<h3><r:title /></h3>\n<r:snippet name=\"posted\" />\n\nUt enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \n\n<r:snippet name=\"comments\" />', 6)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '/*--------------------------------- Styles.css ---*/ \n\nbody {\n background-color: #BFC1C4;\n font-family: Verdana, Arial, Helvetica, sans-serif;\n font-size: 80%;\n padding: 0;\n margin: 0;\n text-align: center; }\n\n#page {\n margin: 15px auto;\n width: 900px;\n text-align: left;\n border: 2px solid #9EA3AC;\n padding: 5px;\n background-color: #FFFFFF;\n clear: both; }\n\n#header {\n color: #FFFFFF;\n font-family: Arial,Helvetica,Geneva,sans-serif;\n font-size: 35px;\n font-weight: bold;\n letter-spacing: 0.02em;\n line-height: 0.72em;\n text-transform: uppercase; }\n\n#main {\n background-color: white;\n float: left;\n width: 100%;\n margin: 15px 0px 30px; }\n\nh1 {\n color: #FFFFFF;\n font-family: Arial, Helvetica, sans-serif;\n font-size: 35px;\n font-weight: bold;\n letter-spacing: 0.02em;\n line-height: 0.72em;\n text-transform: uppercase; }\n\nh2 {\n color: #451811;\n font-family: Georgia, sans-serif;\n font-size: 270%;\n font-weight: normal;\n margin: 0px; }\n\nh3 {\n font-family: Helvetica, Arial, Verdana, sans-serif;\n font-size: 195%;\n margin: 0px;\n font-weight: bold; }\n\nh3 a {\n color: #451811;\n text-decoration: none;\n border-bottom: none;\n margin: 0px; }\n\nh3 a:hover {\n color: #902f1c;\n border-bottom: none; }\n\na {\n color: #711e11;\n text-decoration: none;\n border-bottom: 1px solid #DBD6D1; } \n\na:hover {\n color: #451811;\n text-decoration: none;\n border-bottom: 2px solid #DBD6D1; }\n\np {\n color: #232323;\n font-family: Georgia, Times, \"Times New Roman\";\n font-size: 1.3em;\n line-height: 1.3em;\n margin: 0px 0px 10px; }\n\nul {\n padding: 0; }\n\nli {\n padding: 0; }\n\n\n/*---MAIN COLUMN---*/ \n\n#content-wrapper {\n float: left;\n width: 600px; }\n\n#content {\n padding: 0px 15px; }\n\n\n/*---SIDEBAR---*/ \n\n#sidebar-wrapper {\n float: right;\n width: 300px; }\n\n#sidebar {\n font-size: 90%;\n padding: 15px;\n padding-top: 0px; }\n\n#sidebar h3 {\n color: #222222;\n font-family: Helvetica, Arial, Verdana, sans-serif;\n font-size: 17px;\n font-weight: bold;\n margin: 0px; }\n\n#sidebar p {\n line-height: 1.4em; }\n\n\n/*---ARTICLE---*/ \n\n.entry {\n margin-bottom: 20px; }\n\n.entry .info {\n margin-top: 1em;\n font-size: 1em; }\n\n.entry p {\n font-size: 1.1em; }\n\n.posted {\n color: #918C7E;\n font-family: \"lucida grande\",arial,helvetica,verdana,sans-serif;\n font-size: 10px;\n margin: -3px 0 5px;\n padding: 0px; }\n\n.posted em {\n color: #451811;\n font-style: italic;\n margin: 0px 6px;\n font-weight: bold; }\n\n.posted img {\n background: transparent none repeat scroll 0 0;\n border: medium none;\n margin: 0 4px -5px 2px;\n text-decoration: none; }\n\n\n/*---STYLES---*/ \n\n#extra {\n margin-bottom: 10px; }\n\n#extra .box {\n background-color: #e8f0f6;\n border-color: #D5E9F6; }\n\n#extra p {\n line-height: 1.2em;\n margin: 0px 0px 5px 0px; }\n\n#extra em {\n font-style: italic; }\n\n#extra span {\n color: #d26511;\n font-size: 120%; }\n\n#player, #gallery {\n background: #FFFFFF;\n float: left;\n clear: both;\n margin: 0px 15px 15px 0px;\n padding: 3px;\n border: 1px solid #a9cde5; }\n\n#gallery a, \n#gallery a:hover, \n#player a, \n#player a:hover,\n#extra img a,\n#extra img a:hover {\n border-bottom: none !important;\n text-decoration: none !important; }\n\n#extra a img {\n margin-bottom: -3px; }\n\n.spot {\n margin-bottom: 20px;\n clear: both; }\n\n.spot p {\n font-family: Verdana, sans-serif;\n font-size: 11px; \n color: #333333;\n margin-top: 0px; }\n\n.spot img {\n float: left;\n padding: 0px 12px 10px 0px; }\n\n.box {\n padding: 15px;\n border: 1px solid #dbd6d1;\n background-color: #efedeb;\n margin-bottom: 20px; }\n\n.box h3 {\n font-size: 18px;\n margin-bottom: 2px; }\n\n.box input {\n margin-top: 5px; }\n\n.box input.email {\n font-size: 10px;\n padding: 3px; \n color: #a29e96; \n width: 140px; }\n\n.box input.subscribe {\n width: 70px;\n margin-left: 5px;\n color: #232323; }\n\n.box ul {\n margin-left: 20px; }\n\n.hidden {\n display: none; }\n\n.clear {\n clear: both; }\n\n/*---SITEMAP---*/ \n\n#sitemap ul {\n list-style-type: disc;\n margin: 5px 0px 10px 35px;\n line-height: 2em; }\n\n#sitemap li a {\n font-family: Helvetica, Arial, Verdana, sans-serif;\n font-size: 180%;\n font-weight: bold;\n margin: 0px; \n color: #451811;\n text-decoration: none;\n border-bottom: none; }\n\n#sitemap li a:hover {\n color: #902f1c;\n border-bottom: none; }\n\n#sitemap ul.second {\n font-size: 80%; }\n\n/*---FOOTER---*/ \n\n#footer-wrapper {\n margin: 5px auto;\n width: 900px; }\n\n#footer {\n color: #595452;\n float: right;\n font-family: \"Lucida Grande\", Verdana, Helvetica, Arial, sans-serif;\n font-size: 90%;\n margin-bottom: 30px; }\n\n\n/*--------------------------------- Navigation.css ---*/ \n\n#nav {\n	height: 38px;\n	background: transparent url(http://spurrd.com/assets/132/nav-background.gif) repeat-x top left; }\n\n#nav ul {\n	display: block;\n	margin: 0;\n	padding: 0;\n	list-style-type: none;\n	width: auto; }\n\n#nav ul li {\n	display: block;\n	float: left;\n	margin: 0;\n	padding: 0; }\n\n#nav ul li a {\n font-family: \"Lucida Sans\", \"Lucida Grande\", Helvetica, Arial, sans-serif;\n font-size: 13px;\n	display: block;\n	float: left;\n	color: #3D3D3D;\n	text-decoration: none;\n	padding: 8px 16px 7px;\n	border-bottom: none;\n	background: transparent url(http://spurrd.com/assets/150/nav-divider.gif) no-repeat top right; }\n\n#nav ul li a:hover {\n color: #FFFFFF;\n background: #49140c;\n border-bottom: 1px solid #49140c; }\n\n#nav ul li.selected a {\n color: #FFFFFF;\n background: #0b0b0a;\n border-bottom: 1px solid #0b0b0a; }\n\n\n/*--------------------------------- Lightbox.css ---*/ \n\n#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}\n#lightbox img{ width: auto; height: auto;}\n#lightbox a img{ border: none; }\n\n#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }\n#imageContainer{ padding: 10px; }\n\n#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }\n#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; border-bottom: none; }\n#imageContainer>#hoverNav{ left: 0;}\n#hoverNav a{ outline: none; border-bottom: none;}\n\n#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); /* Trick IE into showing hover */ display: block; }\n#prevLink { left: 0; float: left;}\n#nextLink { right: 0; float: right;} \n#prevLink:hover, #prevLink:visited:hover { background: url(http://spurrd.com/assets/192/prevlabel.gif) left 15% no-repeat; }\n#nextLink:hover, #nextLink:visited:hover { background: url(http://www.spurrd.com/assets/189/nextlabel.gif) right 15% no-repeat; }\n\n#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }\n\n#imageData{	padding:0 10px; color: #666; }\n#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	\n#imageData #caption{ font-weight: bold;	}\n#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			\n#imageData #bottomNavClose{ width: 66px; float: right; padding-bottom: 0.7em; outline: none;}	 	\n\n#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }\n', 7)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('sidebar', '', '<div class=\"spot\">\n<img src=\"http://spurrd.com/assets/141/prize.gif\" />\n<h3>Best of Show</h3>\n<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia <a href=\"/about\">consequuntur</a> magni dolor eos qui ration volupt sequi nesciunt. Proin varius urna. In varius bibendum nisl. Donec nec nisi ut nisi varius porttitor.</p>\n</div>\n\n<div class=\"spot\">\n<img src=\"http://spurrd.com/assets/129/green.gif\" />\n<h3>Happy Planet</h3>\n<p>Mauris elit lacus, iaculis a, cons nec, vehicula <a href=\"/about\">condimentum</a> at. Suspendisse sapien enim, tempus ut, facilisis at, vestibulum nec, nunc. Aliquam erat volutpat. Ut sit amet quam. Cum soci natoque penati et magnis dis partur montes, nascet ridiculus mus. Aen vel urna. In justo nisl, cursus in, molestie a, vulputate nec. </p> \n</div>\n\n<div class=\"spot\">\n<img src=\"http://spurrd.com/assets/144/recycle.gif\" />\n<h3>Round and round</h3>\n<p>Donec tempor mollis ante. Nunc felis. Proin ac pede vel nulla lacinia congue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi cursus, dui quis pretium blandit, erat massa lacinia neque, eu porttitor lacus erat ac leo.</p>\n</div>\n\n<r:snippet name=\"newsletter\" />\n\n<div class=\"spot\"><r:snippet name=\"rss\" /></div>\n', 1)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', 'Textile', '<h3><r:title /></h3>\n<r:snippet name=\"posted\" />\n\nVivamus mollis porttitor odio. Vestibulum id mi. Suspendisse a tortor quis metus imperdiet eleifend. Pellentesque libero nulla, aliquam in, tristique vel, elementum et, odio. Fusce id ligula. Vivamus dapibus imperdiet ante. Aliquam id eros ut velit eleifend aliquet. Nulla commodo viverra orci. Sed auctor. Maecenas commodo. Mauris adipiscing lectus quis quam. Nulla a nisl in augue suscipit tincidunt. Nunc eros. Nam eget sapien eget lorem ultrices pulvinar. Vivamus dolor.\n\nSuspendisse auctor risus nec odio. Sed tortor sem, tempor eu, molestie ac, viverra et, arcu. Donec aliquet pede eget tellus. Pellentesque facilisis nibh in ante. Mauris et lectus. Nullam pede. Nam sed pede sollicitudin mi congue vestibulum. Suspendisse et diam sed odio venenatis dictum. \n\nInteger eget nunc sit amet felis interdum sollicitudin. Mauris posuere, quam eu aliquam iaculis, ipsum magna pellentesque arcu, id rutrum augue erat luctus magna.\n\nPraesent ut lacus. Fusce interdum metus laoreet mi. Duis aliquet. Nunc malesuada leo id nulla. Praesent condimentum metus nec odio. Ut ut velit dapibus nibh interdum eleifend. Proin tempor sodales enim. Donec ultricies. Duis bibendum urna id ante. Donec ipsum lorem, venenatis et, tempus ut, vehicula et, mi. \n\n<r:snippet name=\"comments\" />', 8)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', 'Textile', 'h2. Since 1999...\r\n\r\nDuis vitae mi. Nunc tristique mauris malesuada odio. Integer pharetra, urna sit amet scelerisque sollicitudin, felis est rhoncus nibh, sed sollicitudin ipsum lacus quis metus. In hac habitasse platea dictumst. Sed quis sem eu libero tristique vehicula. In fermentum, pede ut congue placerat, arcu erat tempor augue, id ornare ipsum ante vitae tellus. Duis bibendum quam vitae lectus. Curabitur euismod nulla a risus. Suspendisse erat. Nulla facilisi. Integer odio felis, sollicitudin in, feugiat non, dictum sit amet, elit. ', 9)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('sidebar', '', '<div class=\"box\" style=\"margin-top:50px\">\n <h3>Main office</h3>\n 222 Address Street<br />\n Portland, OR 97008<br />\n (503) 545-7777\n</div>\n', 9)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('sidebar', '', '<div class=\"box\">\n<h3>News Archives</h3>\n<ul>\n<r:find url=\"/news/\">\n<r:children:each order=\"desc\">\n<r:header><li><a href=\"<r:date format=\"/news/%Y/%m/\" />\"><r:date format=\"%B %Y\" /></a></li></r:header>\n</r:children:each>\n</r:find>\n</ul>\n</div>\n\n<r:snippet name=\"newsletter\" />\n\n<div class=\"spot\"><r:snippet name=\"rss\" /></div>', 4)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '<r:archive:children:each order=\"desc\">\n<div class=\"entry\">\n<h3><r:link /></h3>\n <div class=\"posted\">\n Posted by <r:author /> on <r:date format=\"%B %d, %Y\" /><em>|</em><img src=\"http://spurrd.com/assets/123/comment.png\" /><a href=\"<r:url />#disqus_thread\">Comments</a><em>|</em><r:link>Read full article</r:link> \n </div>\n <r:content part=\"summary\" />\n</div>\n</r:archive:children:each>\n\n<r:snippet name=\"comments_summary\" />', 10)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('summary', 'Textile', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.', 5)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('summary', 'Textile', 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?', 6)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('summary', 'Textile', 'Vivamus mollis porttitor odio. Vestibulum id mi. Suspendisse a tortor quis metus imperdiet eleifend. Pellentesque libero nulla, aliquam in, tristique vel, elementum et, odio. Fusce id ligula. Vivamus dapibus imperdiet ante. Aliquam id eros ut velit eleifend aliquet. Nulla commodo viverra orci. Sed auctor. Maecenas commodo. Mauris adipiscing lectus quis quam. Nulla a nisl in augue suscipit tincidunt. Nunc eros. Nam eget sapien eget lorem ultrices pulvinar. Vivamus dolor.', 8)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '<h2>Site Map</h2>\n\n<div id=\"sitemap\">\n <ul>\n <r:find url=\"/\">\n <r:snippet name=\"sitemap\" />\n </r:find>\n </ul>\n</div>\n', 11)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('extended', '', '', 11)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('no-map', '', '', 7)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('no-map', '', '', 11)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', 'Textile', '<iframe width=\"868\" height=\"480\" frameborder=\"0\" style=\"border:1px solid #dbd6d1;\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;t=k&amp;s=AARTsJoMI8Z8NYIgz5ckH51H72GUL2fOcw&amp;msa=0&amp;msid=113091985902776583734.00045f77d6a96be3a6389&amp;ll=45.519759,-122.668791&amp;spn=0.030069,0.075531&amp;z=14&amp;output=embed\"></iframe><br /><small><a href=\"http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;t=k&amp;msa=0&amp;msid=113091985902776583734.00045f77d6a96be3a6389&amp;ll=45.519759,-122.668791&amp;spn=0.030069,0.075531&amp;z=14&amp;source=embed\" style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>\n', 12)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('sidebar', '', '', 12)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '<div id=\"extra\">\n <div class=\"box\">\n <div id=\"gallery\">\n <a href=\"http://spurrd.com/assets/162/gallery1.jpg\" rel=\"lightbox[growers]\" title=\"This is a caption.\" /><img src=\"http://spurrd.com/assets/198/thumb-grower.jpg\" /></a>\n <a href=\"http://spurrd.com/assets/165/gallery2.jpg\" rel=\"lightbox[growers]\" title=\"This is a caption.\"></a>\n <a href=\"http://spurrd.com/assets/168/gallery3.jpg\" rel=\"lightbox[growers]\" title=\"This is a caption.\"></a>\n <a href=\"http://spurrd.com/assets/171/gallery4.jpg\" rel=\"lightbox[growers]\" title=\"This is a caption.\"></a>\n </div>\n <h2>Our growers</h2>\n <p><span>Fromus neatus farmus alwaze.</span><br /> In portor auctor neque. Morbi gravida elit non ante. Praesent eros elit, consequat et, rhoncuses atet, rhoncus posuere, massa. Praesent tempor, felis varius gravida!</p>\n </div>\n</div>\n\n<div id=\"extra\">\n <div class=\"box\">\n <div id=\"gallery\">\n <a href=\"http://spurrd.com/assets/162/gallery1.jpg\" rel=\"lightbox[roasters]\" title=\"This is a caption.\" /><img src=\"http://spurrd.com/assets/201/thumb-roaster.jpg\" /></a>\n <a href=\"http://spurrd.com/assets/165/gallery2.jpg\" rel=\"lightbox[roasters]\" title=\"This is a caption.\"></a>\n <a href=\"http://spurrd.com/assets/168/gallery3.jpg\" rel=\"lightbox[roasters]\" title=\"This is a caption.\"></a>\n <a href=\"http://spurrd.com/assets/171/gallery4.jpg\" rel=\"lightbox[roasters]\" title=\"This is a caption.\"></a>\n </div>\n <h2>Our roasters</h2>\n <p><span>Bestes machinum inde wurlde.</span><br /> In portor auctor neque. Morbi gravida elit non ante. Praesent eros elit, consequat et, rhoncuses atet, rhoncus posuere, massa. Praesent tempor, felis varius gravida!</p>\n </div>\n</div>\n\n<div id=\"extra\">\n <div class=\"box\">\n <div id=\"gallery\">\n <a href=\"http://spurrd.com/assets/162/gallery1.jpg\" rel=\"lightbox[grinders]\" title=\"This is a caption.\" /><img src=\"http://spurrd.com/assets/195/thumb-grinder.jpg\" /></a>\n <a href=\"http://spurrd.com/assets/165/gallery2.jpg\" rel=\"lightbox[grinders]\" title=\"This is a caption.\"></a>\n <a href=\"http://spurrd.com/assets/168/gallery3.jpg\" rel=\"lightbox[grinders]\" title=\"This is a caption.\"></a>\n <a href=\"http://spurrd.com/assets/171/gallery4.jpg\" rel=\"lightbox[grinders]\" title=\"This is a caption.\"></a>\n </div>\n <h2>Our grinders</h2>\n <p><span>Whata treet itis tu heerit.</span><br /> In portor auctor neque. Morbi gravida elit non ante. Praesent eros elit, consequat et, rhoncuses atet, rhoncus posuere, massa. Praesent tempor, felis varius gravida!</p>\n </div>\n</div>\n', 13)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('sidebar', '', '<div class=\"spot\">\n<img src=\"http://spurrd.com/assets/156/open.gif\" />\n<h3>Almost always open</h3>\n<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia <a href=\"/about\">consequuntur</a> magni dolor eos qui ration volupt sequi nesciunt. Proin varius urna. In varius bibendum nisl. Donec nec nisi ut nisi varius porttitor.</p>\n</div>\n\n<div class=\"spot\">\n<img src=\"http://spurrd.com/assets/153/gift.gif\" />\n<h3>Roaster gift cards</h3>\n<p>Mauris elit lacus, iaculis a, cons nec, vehicula <a href=\"/about\">condimentum</a> at. Suspendisse sapien enim, tempus ut, facilisis at, vestibulum nec, nunc. Aliquam erat volutpat. Ut sit amet quam. Cum soci natoque penati et magnis dis partur montes, nascet ridiculus mus. Aen vel urna. In justo nisl, cursus in, molestie a, vulputate nec. </p> \n</div>\n\n<div class=\"spot\">\n<img src=\"http://spurrd.com/assets/159/truck.gif\" />\n<h3>Metro delivery</h3>\n<p>Iaculis a, cons nec, condi<a href=\"/about\"> vehicula</a>. Suspendisse sapien enim, tempus ut, facilisis at, vestibulum nec, nunc. Aliquam erat volutpat. Ut sit amet quam. Cum soci natoque penati et magnis dis partur montes, nascet ridiculus mus. Aen vel urna. In justo nisl, cursus in, molestie. </p> \n</div>\n', 13)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('body', '', '/* -------------------------------------------------------------- \n\n reset.css\n * Resets default browser CSS.\n\n Based on work by Eric Meyer:\n * meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/\n\n Icons are available for purchase at:\n * http://www.istockphoto.com/file_closeup/arts-and-entertainment/arts-symbols/4575877-satin-icons-set-9.php?id=4575877\n\n-------------------------------------------------------------- */\n\nhtml, body, div, span, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, code,\ndel, dfn, em, img, q, dl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td {\n	margin: 0;\n	padding: 0;\n	border: 0;\n	font-weight: inherit;\n	font-style: inherit;\n	font-size: 100%;\n	font-family: inherit;\n	vertical-align: baseline;\n}\n\n\nbody { line-height: 1.5; background: #fff; margin:1.5em 0; }\n\n/* Tables still need \'cellspacing=\"0\"\' in the markup. */\ntable { border-collapse: separate; border-spacing: 0; }\ncaption, th, td { text-align: left; font-weight:400; }\n\n/* Remove possible quote marks (\") from <q>, <blockquote>. */\nblockquote:before, blockquote:after, q:before, q:after { content: \"\"; }\nblockquote, q { quotes: \"\" \"\"; }\n\na img { border: none; }\n', 14)[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `page_parts` (`name`, `filter_id`, `content`, `page_id`) VALUES('no-map', '', '', 14)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:25:39) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>"/"}
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_file
+Cache write: Radiant.cache_file
+  [4;36;1mRadiant::Config Load (1.0ms)[0m   [0;1mSELECT * FROM `config` [0m
+Cache write: Radiant::Config
+Cache read: Radiant.cache_file
+Cache write: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (4.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mLayout Load (1.0ms)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 1) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (2.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'articles') ORDER BY name LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'news') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 3[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 8) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'summary') AND (`page_parts`.page_id = 8) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 6) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'summary') AND (`page_parts`.page_id = 6) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 5) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'summary') AND (`page_parts`.page_id = 5) ORDER BY id LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments_summary') ORDER BY name LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'newsletter') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'rss') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 653ms (DB: 22) | 200 [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:25:41) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["reset.css"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'reset.css') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mLayout Load (0.0ms)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 2) ORDER BY name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 14) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 14) ORDER BY id LIMIT 1[0m
+Completed in 117ms (DB: 6) | 200 [http://localhost/reset.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:25:41) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["styles.css"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'styles.css') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mLayout Load (1.0ms)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 2) ORDER BY name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 7) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 7) ORDER BY id LIMIT 1[0m
+Completed in 95ms (DB: 2) | 200 [http://localhost/styles.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:25:42) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["video", "player.swf"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (2.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'video') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mPage Load (2.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 1 AND (status_id = 100 and (class_name = 'FileNotFoundPage'))) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mLayout Load (0.0ms)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 2) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 1) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'newsletter') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'rss') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 296ms (DB: 15) | 404 [http://localhost/video/player.swf]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:25:49) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["news", "2008", "12", "23", "the-finest-grind"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'news') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '2008') AND (`pages`.parent_id = 4) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4) ORDER BY virtual DESC, title ASC[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mLayout Load (2.0ms)[0m   [0mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 8) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 8) ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'posted') ORDER BY name LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments') ORDER BY name LIMIT 1[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 8) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 8) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 8) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 4) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'news') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'newsletter') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'rss') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 298ms (DB: 16) | 200 [http://localhost/news/2008/12/23/the-finest-grind/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:25:53) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["locations"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'locations') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mLayout Load (0.0ms)[0m   [0mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 12) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 12) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 12) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 12) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 12) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 12) ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 145ms (DB: 4) | 200 [http://localhost/locations]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:26:06) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["tour"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'tour') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mLayout Load (0.0ms)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 13) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 13) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 13) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 13) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (2.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 13) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 13) ORDER BY id LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 150ms (DB: 9) | 200 [http://localhost/tour]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:26:27) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["news"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'news') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mLayout Load (1.0ms)[0m   [0mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 4) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 5[0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 8) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'summary') AND (`page_parts`.page_id = 8) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 6) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'summary') AND (`page_parts`.page_id = 6) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 5) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'summary') AND (`page_parts`.page_id = 5) ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments_summary') ORDER BY name LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (1.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 4) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'news') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC[0m
+  [4;35;1mSnippet Load (2.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'newsletter') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'rss') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 327ms (DB: 11) | 200 [http://localhost/news]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:26:38) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["about"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'about') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mLayout Load (1.0ms)[0m   [0mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 9) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 9) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 9) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 9) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 9) ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 9) ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 115ms (DB: 8) | 200 [http://localhost/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2010-06-23 01:26:53) [GET]
+  Parameters: {"controller"=>"site", "action"=>"show_page", "url"=>["video", "player.swf"]}
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_file
+Cache read: Radiant.cache_mtime
+Cache read: Radiant.cache_file
+Cache read: Radiant::Config
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'video') AND (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mPage Load (1.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 1) ORDER BY virtual DESC, title ASC[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 1 AND (status_id = 100 and (class_name = 'FileNotFoundPage'))) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mLayout Load (0.0ms)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSnippet Load (5.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (1.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'navigation') ORDER BY name LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 2) ORDER BY id, name[0m
+  [4;36;1mPagePart Load (1.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'body') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'extended') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 2) ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.page_id = 1) ORDER BY id, name[0m
+  [4;35;1mPagePart Load (0.0ms)[0m   [0mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `page_parts` WHERE (`page_parts`.`name` = 'sidebar') AND (`page_parts`.page_id = 1) ORDER BY id LIMIT 1[0m
+  [4;35;1mSnippet Load (0.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'newsletter') ORDER BY name LIMIT 1[0m
+  [4;36;1mSnippet Load (0.0ms)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'rss') ORDER BY name LIMIT 1[0m
+  [4;35;1mSnippet Load (1.0ms)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') ORDER BY name LIMIT 1[0m
+Completed in 175ms (DB: 9) | 404 [http://localhost/video/player.swf]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Articles</title>
+    <link href="/rss/" rel="alternate" title="RSS" type="application/rss+xml" />
+    <link rel="stylesheet" type="text/css" href="/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <script type="text/javascript" src="http://www.jeroenwijering.com/embed/swfobject.js"></script>
+    <script type="text/javascript" src="http://spurrd.com/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="http://spurrd.com/javascripts/scriptaculous.js?load=effects,builder"></script>
+    <script type="text/javascript" src="http://spurrd.com/javascripts/lightbox.js"></script>
+
+    <!--[if IE 6]>
+      <style type="text/css" media="screen">
+        @import url("/stylesheets/ie6.css");
+      </style>
+    <![endif]-->
+
+    <!--[if IE 7]>
+      <style type="text/css" media="screen">
+        @import url("/stylesheets/ie7.css");
+      </style>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+<img src="http://spurrd.com/assets/120/banner.jpg" width="900px" alt="Your Company" />
+</div>
+
+      <div id="nav">
+        <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/tour">Tour</a></li> <li class="selected"><a href="/news">News</a></li> <li><a href="/locations">Locations</a></li> <li><a href="/about">About</a></li>
+</ul>    
+      </div>
+      <div id="main">
+        <div id="content-wrapper">
+          <div id="content">
+            
+<div class="entry">
+  <h3><a href="/news/2008/12/23/the-finest-grind/">The Finest grind</a></h3>
+    <div class="posted">
+      Posted by root on December 23, 2008<em>|</em><img src="http://spurrd.com/assets/123/comment.png" /><a href="/news/2008/12/23/the-finest-grind/#disqus_thread">Comments</a><em>|</em><a href="/news/2008/12/23/the-finest-grind/">Read full article</a>    
+    </div>
+  <p>Vivamus mollis porttitor odio. Vestibulum id mi. Suspendisse a tortor quis metus imperdiet eleifend. Pellentesque libero nulla, aliquam in, tristique vel, elementum et, odio. Fusce id ligula. Vivamus dapibus imperdiet ante. Aliquam id eros ut velit eleifend aliquet. Nulla commodo viverra orci. Sed auctor. Maecenas commodo. Mauris adipiscing lectus quis quam. Nulla a nisl in augue suscipit tincidunt. Nunc eros. Nam eget sapien eget lorem ultrices pulvinar. Vivamus dolor.</p>
+</div>
+
+<div class="entry">
+  <h3><a href="/news/2006/06/10/grass-fed-foam-from-jersey/">Grass-fed foam from Jersey</a></h3>
+    <div class="posted">
+      Posted by root on June 10, 2006<em>|</em><img src="http://spurrd.com/assets/123/comment.png" /><a href="/news/2006/06/10/grass-fed-foam-from-jersey/#disqus_thread">Comments</a><em>|</em><a href="/news/2006/06/10/grass-fed-foam-from-jersey/">Read full article</a>    
+    </div>
+  <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</div>
+
+<div class="entry">
+  <h3><a href="/news/2006/06/09/new-location-opening-tonight/">New location opening tonight</a></h3>
+    <div class="posted">
+      Posted by root on June 09, 2006<em>|</em><img src="http://spurrd.com/assets/123/comment.png" /><a href="/news/2006/06/09/new-location-opening-tonight/#disqus_thread">Comments</a><em>|</em><a href="/news/2006/06/09/new-location-opening-tonight/">Read full article</a>    
+    </div>
+  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+</div>
+
+
+﻿﻿﻿﻿<script type="text/javascript">
+//<![CDATA[
+(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			}
+		}
+		document.write('<script type="text/javascript" src="http://disqus.com/forums/radiant/get_num_replies.js' + query + '"></' + 'script>');
+	})();
+//]]>
+</script>
+
+
+            
+          </div>
+        </div>
+        <div id="sidebar-wrapper">
+          <div id="sidebar">
+            <div class="box">
+<h3>News Archives</h3>
+<ul>
+
+
+<li><a href="/news/2008/12/">December 2008</a></li>
+
+<li><a href="/news/2006/06/">June 2006</a></li>
+
+
+
+
+</ul>
+</div>
+
+<div class="box">
+  <h3>Our Newsletter</h3>
+    <input class="email" value="Enter your email address..." type="text" onfocus="this.value=''"  id="" name="" />
+    <input class="subscribe" type="submit" value="Subscribe" />
+</div>
+
+<div class="spot"><img src="http://spurrd.com/assets/147/rss.gif" />
+<h3>RSS</h3>
+<p>Get the <a href="/rss/">feed</a> for our latest news. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    <div style="clear:both"></div>
+    </div>
+  </body>
+  <div id="footer-wrapper">
+    <div id="footer">
+      Copyright &copy; 2008 your company. All rights reserved | <a href="mailto:info@yourcompany.com">Contact</a> | <a href="/sitemap">Site Map</a> | Powered by <a href="http://radiantcms.org/">Radiant</a>
+
+    </div>
+  </div>
+</html>

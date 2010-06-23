@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>About</title>
+    <link href="/rss/" rel="alternate" title="RSS" type="application/rss+xml" />
+    <link rel="stylesheet" type="text/css" href="/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <script type="text/javascript" src="http://www.jeroenwijering.com/embed/swfobject.js"></script>
+    <script type="text/javascript" src="http://spurrd.com/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="http://spurrd.com/javascripts/scriptaculous.js?load=effects,builder"></script>
+    <script type="text/javascript" src="http://spurrd.com/javascripts/lightbox.js"></script>
+
+    <!--[if IE 6]>
+      <style type="text/css" media="screen">
+        @import url("/stylesheets/ie6.css");
+      </style>
+    <![endif]-->
+
+    <!--[if IE 7]>
+      <style type="text/css" media="screen">
+        @import url("/stylesheets/ie7.css");
+      </style>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+<img src="http://spurrd.com/assets/120/banner.jpg" width="900px" alt="Your Company" />
+</div>
+
+      <div id="nav">
+        <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/tour">Tour</a></li> <li><a href="/news">News</a></li> <li><a href="/locations">Locations</a></li> <li class="selected"><a href="/about">About</a></li>
+</ul>    
+      </div>
+      <div id="main">
+        <div id="content-wrapper">
+          <div id="content">
+            <h2>Since 1999&#8230;</h2>
+<p>Duis vitae mi. Nunc tristique mauris malesuada odio. Integer pharetra, urna sit amet scelerisque sollicitudin, felis est rhoncus nibh, sed sollicitudin ipsum lacus quis metus. In hac habitasse platea dictumst. Sed quis sem eu libero tristique vehicula. In fermentum, pede ut congue placerat, arcu erat tempor augue, id ornare ipsum ante vitae tellus. Duis bibendum quam vitae lectus. Curabitur euismod nulla a risus. Suspendisse erat. Nulla facilisi. Integer odio felis, sollicitudin in, feugiat non, dictum sit amet, elit.</p>
+            
+          </div>
+        </div>
+        <div id="sidebar-wrapper">
+          <div id="sidebar">
+            <div class="box" style="margin-top:50px">
+  <h3>Main office</h3>
+  222 Address Street<br />
+  Portland, OR 97008<br />
+  (503) 545-7777
+</div>
+
+          </div>
+        </div>
+      </div>
+    <div style="clear:both"></div>
+    </div>
+  </body>
+  <div id="footer-wrapper">
+    <div id="footer">
+      Copyright &copy; 2008 your company. All rights reserved | <a href="mailto:info@yourcompany.com">Contact</a> | <a href="/sitemap">Site Map</a> | Powered by <a href="http://radiantcms.org/">Radiant</a>
+
+    </div>
+  </div>
+</html>
